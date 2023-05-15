@@ -1,2 +1,2 @@
 # Caption_GenrationML_Webapp
-Image Upload Feature is added further connection with the machine learning api will be performed.
+Generating caption with the help of transformers and hugging face model for the image uploaded by users on the webpage.
