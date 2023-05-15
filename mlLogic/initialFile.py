@@ -1,5 +1,5 @@
 from transformers import VisionEncoderDecoderModel, ViTFeatureExtractor, AutoTokenizer
-import torch
+from torch import cuda, device
 import warnings
 warnings.simplefilter("ignore")
 from PIL import Image
@@ -9,6 +9,6 @@ feature_extractor = ViTFeatureExtractor.from_pretrained("nlpconnect/vit-gpt2-ima
 # Loads the pre-trained ViTImageProcessor from Hugging Face Transformers Hub.
 tokenizer = AutoTokenizer.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 # Loads the pre-trained AutoTokenizer from Hugging Face Transformers Hub.
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = device("cuda" if cuda.is_available() else "cpu")
 model.to(device)
 #     Sets the device to use the GPU if available, otherwise uses the CPU and moves the model to the specified device.

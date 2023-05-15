@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Generated Caption</h1>
+  {% if caption %}
+    <p>{{ caption }}</p>
+<!--    <h3>Uploaded user Image</h3>-->
+<!--    <p><img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px"></p>-->
+  {% else %}
+    <p>No caption generated yet.</p>
+  {% endif %}
+{% endblock %}

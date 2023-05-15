@@ -1,4 +1,4 @@
-from initialFile import *
+from mlLogic.initialFile import *
 
 max_length = 16
 num_beams = 4
